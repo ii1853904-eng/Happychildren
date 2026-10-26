@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'unsafe-inline'; img-src data:; form-action 'none'; base-uri 'none'">
+<title>Happy Child — Online məsləhət</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f9fc;--card:#fff;--ink:#1d2b3a;--mute:#5b6b7c;--line:#dbe4ee;--blue:#2f6fb3;--blue-d:#1f4f86;--sun:#f5b82e;--sun-d:#6b4a00;--ok:#1f7a4d;--bad:#b3322f}
+@media (prefers-color-scheme:dark){:root{--bg:#121a23;--card:#1a2531;--ink:#e8eef5;--mute:#9db0c3;--line:#2c3b4b;--blue:#6aa7e8;--blue-d:#8dbcf0;--sun:#f5b82e;--sun-d:#f5d98a;--ok:#5fd09a;--bad:#ff8a85}}
+*{box-sizing:border-box}
+html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;font-family:'Nunito',system-ui,'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+h1,h2,h3{margin:0 0 .4em;line-height:1.2}
+.wrap{max-width:1000px;margin:0 auto;padding:20px 16px 40px}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.logo{width:48px;height:48px;border-radius:50% 50% 50% 12px;background:var(--sun);display:grid;place-items:center;font-weight:800;font-size:24px;color:#4a3300}
+.brand b{font-size:1.5rem;font-weight:800}.brand span{display:block;font-size:.9rem;color:var(--mute)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.tab{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:9px 16px;border-radius:999px;font:inherit;font-weight:600;cursor:pointer}
+.tab[aria-selected=true]{background:var(--blue);border-color:var(--blue);color:#fff}
+label{display:block;font-weight:600;margin:12px 0 4px;font-size:.95rem}
+input,select,textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--bg);color:var(--ink)}
+input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible{outline:3px solid var(--sun);outline-offset:1px}
+.btn{display:inline-block;border:0;border-radius:10px;padding:11px 18px;font:inherit;font-weight:800;cursor:pointer;background:var(--blue);color:#fff;text-decoration:none;text-align:center}
+.btn.alt{background:transparent;color:var(--blue-d);border:1px solid var(--blue)}
+.btn.sun{background:var(--sun);color:#4a3300}
+.btn.sm{padding:6px 11px;font-size:.85rem}.btn.bad{background:var(--bad);color:#fff}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.row>*{flex:1 1 150px}.row.auto>*{flex:0 0 auto}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:640px){.grid2{grid-template-columns:1fr}}
+.hint{font-size:.85rem;color:var(--mute)}
+.err{color:var(--bad);font-weight:600;min-height:1.4em;margin-top:8px}
+.demo{background:var(--sun);color:#4a3300;padding:8px 12px;border-radius:10px;font-size:.85rem;font-weight:600;margin-bottom:16px}
+.hotline{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center}
+.hotline strong{font-size:1.5rem;color:var(--blue-d)}
+.bar{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.last{background:var(--card);border:1px dashed var(--blue);border-radius:10px;padding:8px 12px;font-size:.9rem;margin-bottom:14px}
+.tbl{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.93rem}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--mute);font-weight:600}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:12px 0}
+.opt{border:2px solid var(--line);border-radius:12px;padding:14px;cursor:pointer;background:var(--card)}
+.opt:has(input:checked){border-color:var(--blue);background:color-mix(in srgb,var(--blue) 10%,var(--card))}
+.opt input{width:auto;margin-right:6px}.opt h3{display:inline;font-size:1.05rem}.opt p{margin:.4em 0 0;font-size:.9rem;color:var(--mute)}
+.ok{color:var(--ok);font-weight:800}
+dialog{border:1px solid var(--line);border-radius:14px;padding:20px;max-width:480px;width:92%;background:var(--card);color:var(--ink)}
+dialog::backdrop{background:rgba(10,20,30,.55)}
+.hide{display:none!important}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand"><div class="logo" aria-hidden="true">H</div><div><b>Happy Child</b><span>Uşaq müəssisəsinin online məsləhət alt sistemi</span></div></div>
+  <div class="demo" id="demoBanner">Prototip rejimi: real doğrulama yoxdur, məlumatlar yalnız brauzer yaddaşındadır və səhifə yenilənəndə silinir. Real şəxsi məlumat daxil etməyin.</div>
+
+  <!-- GİRİŞ -->
+  <section id="loginView" class="card" aria-label="Giriş">
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" id="tabPub" aria-selected="true">Ümumi istifadəçi</button>
+      <button class="tab" role="tab" id="tabStaff" aria-selected="false">Rəhbər və kurator</button>
+    </div>
+
+    <form id="pubForm" autocomplete="off" novalidate>
+      <h2>Ümumi istifadəçi girişi</h2>
+      <p class="hint">Giriş MyGov portalı üzərindən təsdiqlənir.</p>
+      <label for="pFin">FIN kod</label><input id="pFin" maxlength="7" inputmode="text" autocapitalize="characters" placeholder="7 simvol">
+      <label for="pUser">İstifadəçi adı</label><input id="pUser" autocomplete="off">
+      <label for="pPass">Parol</label><input id="pPass" type="password" autocomplete="off">
+      <div class="err" id="pErr" role="alert"></div>
+      <div class="row auto"><button class="btn" type="submit">Daxil ol</button><a class="btn sun" id="mygov" href="https://my.gov.az" rel="noopener noreferrer">MyGov ilə daxil ol</a></div>
+    </form>
+
+    <form id="stForm" class="hide" autocomplete="off" novalidate>
+      <h2>Müəssisə rəhbəri və kurator girişi</h2>
+      <p class="hint">Giriş FIN, istifadəçi adı və ASAN İmza ilə təsdiqlənir.</p>
+      <label for="sRole">Vəzifə</label><select id="sRole"><option value="rəhbər">Müəssisə rəhbəri</option><option value="kurator">Kurator</option></select>
+      <div class="grid2"><div><label for="sFin">FIN kod</label><input id="sFin" maxlength="7" autocapitalize="characters"></div><div><label for="sUser">İstifadəçi adı</label><input id="sUser"></div></div>
+      <label for="sAsan">ASAN İmza (mobil nömrə)</label><input id="sAsan" inputmode="tel" placeholder="+994 5X XXX XX XX">
+      <div class="grid2"><div><label for="sAd">Ad</label><input id="sAd"></div><div><label for="sSoy">Soyad</label><input id="sSoy"></div></div>
+      <label for="sAta">Ata adı</label><input id="sAta">
+      <p class="hint">Ad, soyad və ata adı real sistemdə ASAN İmzadan avtomatik gələcək.</p>
+      <div class="err" id="sErr" role="alert"></div>
+      <button class="btn" type="submit">ASAN İmza ilə daxil ol</button>
+    </form>
+
+    <div class="hotline"><span>Sual və ya problem üçün qaynar xətt:</span><strong>*2121</strong></div>
+  </section>
+
+  <!-- ƏSAS PANEL -->
+  <section id="appView" class="hide" aria-label="Alt sistem">
+    <div class="bar"><div><h2 id="who" style="margin:0"></h2><span class="hint" id="whoRole"></span></div><button class="btn alt" id="logout">Çıxış</button></div>
+    <div class="last" id="lastBox"></div>
+    <div class="tabs" role="tablist" id="appTabs"></div>
+    <div id="pane"></div>
+    <div class="hotline"><span>Qaynar xətt:</span><strong>*2121</strong></div>
+  </section>
+</div>
+
+<dialog id="dlg"><form method="dialog" id="dlgForm"><h3 id="dlgTitle"></h3><div id="dlgBody"></div><div class="err" id="dlgErr" role="alert"></div><div class="row auto" style="margin-top:12px"><button class="btn" value="ok" id="dlgOk">Yadda saxla</button><button class="btn alt" value="cancel" formnovalidate>Ləğv et</button></div></form></dialog>
+
+<script>
+"use strict";
+const CONFIG={DEMO:true,MYGOV_URL:"https://my.gov.az",IDLE_MIN:10};
+// DEMO=false olduqda ümumi istifadəçi formu birbaşa MyGov-a yönləndirir. Real doğrulama serverdə aparılmalıdır.
+
+/* ---- Yaddaş (yalnız RAM, brauzerdə saxlanmır) ---- */
+const db={
+  children:[
+    {id:1,ad:"Nümunə Uşaq A",ata:"—",dogum:"2016-05-12",giris:"2022-03-01",qeyd:"Nümunə qeyd"},
+    {id:2,ad:"Nümunə Uşaq B",ata:"—",dogum:"2014-09-30",giris:"2021-11-15",qeyd:""}
+  ],
+  staff:[
+    {id:1,ad:"Nümunə Əməkdaş 1",ata:"—",vezife:"Sosial işçi",tel:"—"},
+    {id:2,ad:"Nümunə Əməkdaş 2",ata:"—",vezife:"Psixoloq",tel:"—"},
+    {id:3,ad:"Nümunə Əməkdaş 3",ata:"—",vezife:"Tərbiyəçi",tel:"—"}
+  ],
+  logins:{},      // FIN -> {ad,soy,ata,rol,tarix}
+  requests:[],
+  seq:100
+};
+let session=null,idleT=null,activeTab="";
+
+/* ---- Köməkçilər ---- */
+const $=id=>document.getElementById(id);
+function h(tag,attrs={},...kids){const e=document.createElement(tag);for(const k in attrs){if(k==="class")e.className=attrs[k];else if(k.startsWith("on"))e.addEventListener(k.slice(2),attrs[k]);else e.setAttribute(k,attrs[k]);}
+  kids.flat().forEach(c=>e.append(c instanceof Node?c:document.createTextNode(c??"")));return e;}
+const fmt=d=>new Date(d).toLocaleString("az-AZ",{dateStyle:"medium",timeStyle:"short"});
+const validFin=v=>/^[A-Z0-9]{7}$/.test(v);
+const mask=f=>f.slice(0,2)+"•••"+f.slice(-2);
+const isStaff=()=>session&&session.type==="staff";
+
+/* ---- Giriş ---- */
+function pick(which){const pub=which==="pub";
+  $("tabPub").setAttribute("aria-selected",pub);$("tabStaff").setAttribute("aria-selected",!pub);
+  $("pubForm").classList.toggle("hide",!pub);$("stForm").classList.toggle("hide",pub);}
+$("tabPub").onclick=()=>pick("pub");$("tabStaff").onclick=()=>pick("staff");
+$("mygov").href=CONFIG.MYGOV_URL;
+if(!CONFIG.DEMO)$("demoBanner").classList.add("hide");
+
+$("pubForm").addEventListener("submit",e=>{e.preventDefault();
+  const fin=$("pFin").value.trim().toUpperCase(),user=$("pUser").value.trim(),pass=$("pPass").value;
+  if(!validFin(fin))return $("pErr").textContent="FIN kod 7 simvoldan (rəqəm və latın hərfi) ibarət olmalıdır.";
+  if(user.length<3)return $("pErr").textContent="İstifadəçi adını daxil edin.";
+  if(pass.length<8)return $("pErr").textContent="Parol ən azı 8 simvol olmalıdır.";
+  $("pErr").textContent="";
+  if(!CONFIG.DEMO){location.href=CONFIG.MYGOV_URL;return;}
+  start({type:"pub",ad:user,fin});
+});
+$("stForm").addEventListener("submit",e=>{e.preventDefault();
+  const fin=$("sFin").value.trim().toUpperCase(),user=$("sUser").value.trim(),asan=$("sAsan").value.trim();
+  const ad=$("sAd").value.trim(),soy=$("sSoy").value.trim(),ata=$("sAta").value.trim();
+  const err=m=>($("sErr").textContent=m);
+  if(!validFin(fin))return err("FIN kod 7 simvoldan ibarət olmalıdır.");
+  if(user.length<3)return err("İstifadəçi adını daxil edin.");
+  if(!/^\+?\d[\d\s]{8,16}$/.test(asan))return err("ASAN İmza üçün mobil nömrəni düzgün daxil edin.");
+  if(!ad||!soy||!ata)return err("Ad, soyad və ata adını daxil edin.");
+  err("");
+  start({type:"staff",rol:$("sRole").value,ad,soy,ata,fin});
+});
+
+function start(s){
+  session=s;
+  if(isStaff()){ // son giriş qeydi
+    db.logins[s.fin]={ad:s.ad,soy:s.soy,ata:s.ata,rol:s.rol,tarix:new Date().toISOString()};
+  }
+  ["pFin","pUser","pPass","sFin","sUser","sAsan","sAd","sSoy","sAta"].forEach(i=>$(i).value="");
+  $("loginView").classList.add("hide");$("appView").classList.remove("hide");
+  $("who").textContent=isStaff()?`${s.soy} ${s.ad} ${s.ata}`:s.ad;
+  $("whoRole").textContent=isStaff()?(s.rol==="rəhbər"?"Müəssisə rəhbəri":"Kurator")+" · FIN "+mask(s.fin):"Ümumi istifadəçi";
+  const tabs=isStaff()?[["children","Uşaqlar"],["staff","Əməkdaşlar"],["meet","Qəyyumluq görüşləri"],["log","Giriş jurnalı"]]:[["meet","Qəyyumluq görüşü"]];
+  const bar=$("appTabs");bar.replaceChildren(...tabs.map(([k,t])=>h("button",{class:"tab",role:"tab","data-k":k,onclick:()=>show(k)},t)));
+  renderLast();show(tabs[0][0]);resetIdle();
+}
+function renderLast(){const box=$("lastBox");
+  if(!isStaff()){box.classList.add("hide");return;}box.classList.remove("hide");
+  const all=Object.values(db.logins).sort((a,b)=>b.tarix.localeCompare(a.tarix));
+  const l=all[0];box.textContent=`Sistemə ən son giriş: ${l.soy} ${l.ad} ${l.ata} — ${fmt(l.tarix)}`;}
+function logout(){session=null;clearTimeout(idleT);$("pane").replaceChildren();
+  $("appView").classList.add("hide");$("loginView").classList.remove("hide");}
+$("logout").onclick=logout;
+
+/* Məxfilik: 10 dəq hərəkətsizlikdən sonra avtomatik çıxış */
+function resetIdle(){clearTimeout(idleT);if(!session)return;idleT=setTimeout(()=>{logout();$(session?"":"pErr").textContent="";alert("Təhlükəsizlik üçün hərəkətsizliyə görə sessiya bağlandı.");},CONFIG.IDLE_MIN*60000);}
+["click","keydown","touchstart"].forEach(ev=>document.addEventListener(ev,resetIdle,{passive:true}));
+document.addEventListener("visibilitychange",()=>{if(document.hidden&&session&&isStaff())$("pane").style.visibility="hidden";else $("pane").style.visibility="";});
+
+/* ---- Panel ---- */
+function show(k){activeTab=k;
+  document.querySelectorAll("#appTabs .tab").forEach(t=>t.setAttribute("aria-selected",t.dataset.k===k));
+  const p=$("pane");p.replaceChildren();
+  ({children:viewChildren,staff:viewStaff,meet:viewMeet,log:viewLog})[k](p);}
+
+function table(heads,rows){return h("div",{class:"tbl"},h("table",{},h("thead",{},h("tr",{},heads.map(x=>h("th",{},x)))),h("tbody",{},rows.length?rows:[h("tr",{},h("td",{colspan:heads.length,class:"hint"},"Hələ qeyd yoxdur. “Əlavə et” düyməsi ilə ilk qeydi yaradın."))])));}
+
+function viewChildren(p){
+  p.append(h("div",{class:"bar"},h("h2",{},"Müəssisədəki uşaqlar"),h("button",{class:"btn sun",onclick:()=>editChild()},"Uşaq əlavə et")));
+  p.append(table(["Ad soyad","Ata adı","Doğum tarixi","Daxil olma","Qeyd",""],db.children.map(c=>h("tr",{},
+    h("td",{},c.ad),h("td",{},c.ata),h("td",{},c.dogum),h("td",{},c.giris),h("td",{},c.qeyd),
+    h("td",{class:"row auto"},h("button",{class:"btn sm alt",onclick:()=>editChild(c)},"Dəyiş"),h("button",{class:"btn sm bad",onclick:()=>del("children",c.id,viewChildren)},"Sil"))))));
+}
+function viewStaff(p){
+  p.append(h("div",{class:"bar"},h("h2",{},"Sosial işçilər, psixoloqlar, tərbiyəçilər"),h("button",{class:"btn sun",onclick:()=>editStaff()},"Əməkdaş əlavə et")));
+  p.append(table(["Ad soyad","Ata adı","Vəzifə","Telefon",""],db.staff.map(c=>h("tr",{},
+    h("td",{},c.ad),h("td",{},c.ata),h("td",{},c.vezife),h("td",{},c.tel),
+    h("td",{class:"row auto"},h("button",{class:"btn sm alt",onclick:()=>editStaff(c)},"Dəyiş"),h("button",{class:"btn sm bad",onclick:()=>del("staff",c.id,viewStaff)},"Sil"))))));
+}
+function viewLog(p){
+  p.append(h("h2",{},"Hər əməkdaşın sistemə son girişi"));
+  const rows=Object.values(db.logins).sort((a,b)=>b.tarix.localeCompare(a.tarix)).map(l=>h("tr",{},h("td",{},l.soy),h("td",{},l.ad),h("td",{},l.ata),h("td",{},l.rol==="rəhbər"?"Müəssisə rəhbəri":"Kurator"),h("td",{},fmt(l.tarix))));
+  p.append(table(["Soyad","Ad","Ata adı","Vəzifə","Son giriş"],rows));
+}
+function del(key,id,view){if(!confirm("Bu qeyd silinsin?"))return;db[key]=db[key].filter(x=>x.id!==id);show(activeTab);}
+
+/* ---- Redaktə dialoqu (yalnız rəhbər və kurator) ---- */
+function field(id,label,val="",type="text",req=true){return h("div",{},h("label",{for:id},label),h("input",{id,type,value:val,...(req?{required:""}:{})}));}
+function openForm(title,fields,onSave){
+  if(!isStaff())return;
+  $("dlgTitle").textContent=title;$("dlgBody").replaceChildren(...fields);$("dlgErr").textContent="";
+  const dlg=$("dlg");dlg.onclose=()=>{if(dlg.returnValue==="ok")onSave();};
+  $("dlgOk").onclick=e=>{const f=$("dlgForm");if(!f.checkValidity()){e.preventDefault();f.reportValidity();}};
+  dlg.returnValue="";dlg.showModal();
+}
+function editChild(c){const n=!c;c=c||{id:++db.seq};
+  openForm(n?"Uşaq əlavə et":"Uşaq məlumatını dəyiş",[field("fAd","Ad və soyad",c.ad),field("fAta","Ata adı",c.ata),field("fDg","Doğum tarixi",c.dogum,"date"),field("fGr","Müəssisəyə daxil olma tarixi",c.giris,"date"),field("fQ","Qeyd",c.qeyd,"text",false)],
+  ()=>{Object.assign(c,{ad:$("fAd").value.trim(),ata:$("fAta").value.trim(),dogum:$("fDg").value,giris:$("fGr").value,qeyd:$("fQ").value.trim()});if(n)db.children.push(c);show(activeTab);});}
+function editStaff(c){const n=!c;c=c||{id:++db.seq};
+  const sel=h("select",{id:"fV"},["Sosial işçi","Psixoloq","Tərbiyəçi"].map(v=>h("option",{value:v,...(v===c.vezife?{selected:""}:{})},v)));
+  openForm(n?"Əməkdaş əlavə et":"Əməkdaş məlumatını dəyiş",[field("fAd","Ad və soyad",c.ad),field("fAta","Ata adı",c.ata),h("div",{},h("label",{for:"fV"},"Vəzifə"),sel),field("fTel","Telefon",c.tel,"tel",false)],
+  ()=>{Object.assign(c,{ad:$("fAd").value.trim(),ata:$("fAta").value.trim(),vezife:$("fV").value,tel:$("fTel").value.trim()});if(n)db.staff.push(c);show(activeTab);});}
+
+/* ---- Qəyyumluq üçün online görüş: zəng / videozəng / çat ---- */
+const MEET=[
+ ["zəng","Telefon zəngi","Qısa ilkin tanışlıq (15–20 dəq). Sosial işçi sizinlə əlaqə saxlayıb prosesi, tələb olunan sənədləri və növbəti addımları izah edir."],
+ ["videozəng","Videozəng","Ətraflı görüş (30–45 dəq). Psixoloq və sosial işçi ilə üzbəüz söhbət, suallara cavab, müəssisənin tanıtımı. Görüş vaxtı üçün təyin olunmuş şəxsi link göndərilir."],
+ ["çat","Yazılı çat","Zəng etmək rahat olmayanlar üçün. Sualları yazılı verirsiniz, mütəxəssis iş saatları ərzində cavab verir. Şəxsi məlumat çatda tələb olunmur."]
+];
+function viewMeet(p){
+  p.append(h("h2",{},"Qəyyumluğa götürmək istəyənlər üçün online görüş"),h("p",{class:"hint"},"Uşağın şəxsi məlumatları bu mərhələdə paylaşılmır. Əvvəlcə prosesi və uyğunluğu müzakirə edirik."));
+  const f=h("form",{novalidate:""});
+  f.append(h("div",{class:"opts"},MEET.map(([v,t,d],i)=>h("label",{class:"opt"},h("input",{type:"radio",name:"mt",value:v,...(i===1?{checked:""}:{})}),h("h3",{},t),h("p",{},d)))));
+  f.append(h("div",{class:"grid2"},h("div",{},h("label",{for:"mAd"},"Ad, soyad"),h("input",{id:"mAd",required:""})),h("div",{},h("label",{for:"mTel"},"Əlaqə nömrəsi"),h("input",{id:"mTel",type:"tel",required:""}))));
+  f.append(h("div",{class:"grid2"},h("div",{},h("label",{for:"mDt"},"Uyğun tarix və saat"),h("input",{id:"mDt",type:"datetime-local",required:""})),h("div",{},h("label",{for:"mNote"},"Qısa qeyd (istəyə bağlı)"),h("input",{id:"mNote",maxlength:"200"}))));
+  const msg=h("div",{class:"err",role:"alert"});
+  f.append(msg,h("button",{class:"btn",type:"submit"},"Görüş tələb et"));
+  f.addEventListener("submit",e=>{e.preventDefault();
+    if(!f.checkValidity()){msg.textContent="Ad, əlaqə nömrəsi və tarixi doldurun.";return;}
+    db.requests.push({ad:$("mAd").value.trim(),tel:$("mTel").value.trim(),dt:$("mDt").value,tip:f.mt.value,note:$("mNote").value.trim(),ts:new Date().toISOString(),status:"Yeni"});
+    f.reset();msg.className="ok";msg.textContent="Tələbiniz qəbul edildi. Mütəxəssis sizinlə əlaqə saxlayacaq.";if(isStaff())show("meet");});
+  p.append(h("div",{class:"card"},f));
+  if(isStaff()){
+    p.append(h("h3",{style:"margin-top:22px"},"Daxil olan tələblər"),table(["Ad soyad","Əlaqə","Növ","Tarix","Qeyd","Status"],db.requests.map(r=>h("tr",{},h("td",{},r.ad),h("td",{},r.tel),h("td",{},r.tip),h("td",{},r.dt.replace("T"," ")),h("td",{},r.note),h("td",{},r.status)))));
+  }
+}
+</script>
+</body>
+</html>
